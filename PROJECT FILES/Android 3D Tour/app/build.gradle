@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+    buildToolsVersion buildConfig.tools
+
+    defaultConfig {
+        applicationId buildConfig.id
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+        versionCode buildConfig.version.code
+        versionName buildConfig.version.name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        def tokenKey = properties.getProperty("token", "")
+        it.buildConfigField('String', 'TOKEN_KEY', "\"" + tokenKey + "\"")
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation deps.jetbrains.stdlib
+
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.cardview
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.viewModel
+    implementation deps.androidx.liveData
+    implementation deps.material_component
+
+    //implementation deps.dagger.common
+    //implementation deps.dagger.compiler
+
+    implementation deps.google.gson
+
+    implementation deps.squareup.retrofit
+    implementation deps.squareup.converter_gson
+    implementation deps.squareup.adapter_rxjava2
+    implementation deps.squareup.converter_moshi
+    implementation deps.squareup.log_interceptor
+
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.3'
+
+    implementation deps.reactivex.rxJava
+    //implementation deps.reactivex.rxAndroid
+
+    implementation deps.glide
+    implementation deps.mosby
+
+    implementation deps.jakewharton.rxbinding_kotlin
+    implementation deps.jakewharton.rxbinding_support
+    implementation deps.jakewharton.rxbinding_appcompat
+
+    implementation deps.coil
+
+    implementation project(':unityLibrary')
+    implementation fileTree(dir: project(':unityLibrary').getProjectDir().toString() + ('\\libs'), include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

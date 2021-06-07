@@ -1,0 +1,119 @@
+{
+    "m_SelectedDeviceId": "RR8MA02VPXZ",
+    "m_SelectedPackage": {
+        "deviceId": "RR8MA02VPXZ",
+        "name": "com.skripsi.tour3d",
+        "processId": 31187,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.sec.android.app.launcher",
+            "processId": 5192,
+            "exited": false
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 13715,
+            "exited": true
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 18217,
+            "exited": true
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 29599,
+            "exited": true
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 3055,
+            "exited": true
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 9122,
+            "exited": true
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 14925,
+            "exited": false
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 19840,
+            "exited": false
+        },
+        {
+            "deviceId": "RR8MA02VPXZ",
+            "name": "com.skripsi.tour3d",
+            "processId": 31187,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}

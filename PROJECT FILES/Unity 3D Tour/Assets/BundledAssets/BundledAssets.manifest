@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2085840996
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: 3dmodel
+      Dependencies: {}
+    Info_1:
+      Name: items
+      Dependencies: {}

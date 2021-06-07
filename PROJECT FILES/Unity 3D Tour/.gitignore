@@ -1,0 +1,7 @@
+Library/*
+Temp/*
+export/*
+
+!Library/.gitkeep
+!Temp/.gitkeep
+!export/.gitkeep
